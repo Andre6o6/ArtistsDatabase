@@ -1,0 +1,20 @@
+﻿<Window x:Class="db_project.UpdateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:db_project"
+        mc:Ignorable="d"
+        Title="Update entity" Height="281" Width="381">
+    <Grid>
+        <Button x:Name="buttonOK" Content="OK" HorizontalAlignment="Center" Margin="105,0,193,10" Width="75" Height="20" VerticalAlignment="Bottom" Click="buttonOK_Click"/>
+        <ComboBox x:Name="fFieldComboBox" Margin="0,128,12,0" VerticalAlignment="Top" Height="23" HorizontalAlignment="Right" Width="130"/>
+        <Label x:Name="labelFField" Content=" " HorizontalAlignment="Right" Margin="0,128,147,0" VerticalAlignment="Top" Height="23"/>
+        <DataGrid x:Name="dataGrid" Margin="10,74,10,0" VerticalAlignment="Top" Height="49" CanUserAddRows="False"/>
+        <Label x:Name="label" Content="Table:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label x:Name="labelTable" Content=" " HorizontalAlignment="Left" Margin="65,10,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label x:Name="label1" Content="Enter new values for this item:" HorizontalAlignment="Left" Margin="10,46,0,0" VerticalAlignment="Top" FontSize="13.333"/>
+        <Button x:Name="buttonCancel" Content="Cancel" HorizontalAlignment="Center" Margin="185,0,113,10" Width="75" Click="buttonCancel_Click" Height="20" VerticalAlignment="Bottom"/>
+
+    </Grid>
+</Window>

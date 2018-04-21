@@ -1,0 +1,42 @@
+﻿<Window x:Class="db_project.CreateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:db_project"
+        mc:Ignorable="d"
+        Title="Create entity" Height="309" Width="415.909">
+    <Grid Margin="0,0,2,2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ComboBox x:Name="tableSelectionComboBox" HorizontalAlignment="Left" Margin="65,15,0,0" VerticalAlignment="Top" Width="120" DropDownClosed="tableSelectionComboBox_DropDownClosed" Height="22" FontSize="13.333">
+            <ComboBoxItem Content="Artist"/>
+            <ComboBoxItem Content="Painting"/>
+            <ComboBoxItem Content="Exhibition"/>
+            <ComboBoxItem Content="Auction"/>
+            <ComboBoxItem Content="Site"/>
+            <ComboBoxItem Content="Address"/>
+            <ComboBoxItem Content="City"/>
+            <ComboBoxItem Content="Country"/>
+        </ComboBox>
+        <DataGrid x:Name="newEntityDataGrid" Margin="10,77,10,0" Height="47" VerticalAlignment="Top" CanUserAddRows="False"/>
+        <Button x:Name="buttonAdd" Content="New" Margin="0,129,10,0" VerticalAlignment="Top" Height="22" HorizontalAlignment="Right" Width="32" Click="buttonAdd_Click" Visibility="Hidden"/>
+        <ComboBox x:Name="addComboBox" Margin="0,129,43,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="99" Height="22" Visibility="Hidden"  />
+        <Label x:Name="labelAdd" Content="Add" HorizontalAlignment="Right" Margin="0,127,147,0" VerticalAlignment="Top" Height="30" Visibility="Hidden"/>
+        <Button x:Name="buttonOK" Content="OK" Margin="125,0,206,10" Click="buttonOK_Click" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="75"/>
+        <Button x:Name="buttonCancel" Content="Cancel" Margin="205,0,126,10" Click="buttonCancel_Click" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="75"/>
+        <Label x:Name="label" Content="Enter values here:" HorizontalAlignment="Left" Margin="10,51,0,0" VerticalAlignment="Top" FontSize="13.333"/>
+        <Label x:Name="label1" Content="Table:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Button x:Name="buttonXMLExport" Content="XML Export" HorizontalAlignment="Right" Margin="0,191,43,0" VerticalAlignment="Top" Width="70" Click="buttonXMLExport_Click"/>
+        <Button x:Name="buttonXMLImport" Content="XML Import" HorizontalAlignment="Right" Margin="0,211,43,0" VerticalAlignment="Top" Width="70" Click="buttonXMLImport_Click" IsEnabled="False"/>
+        <RichTextBox x:Name="richTextBox" Height="40" Margin="48,192,118,0" VerticalAlignment="Top" Focusable="False" IsTabStop="False" IsReadOnlyCaretVisible="True" IsDocumentEnabled="True" IsManipulationEnabled="True" BorderBrush="{x:Null}">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="Use XML to backup the chages or when error happens"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+
+    </Grid>
+</Window>
